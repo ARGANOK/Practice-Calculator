@@ -14,23 +14,21 @@ function display(x){
         }
         return;
         // }
-    }
-    function del(){
-        let displaysection = document.getElementById('value');
-        let displaysectionvalue = displaysection.textContent;
-        let digitCount = displaysectionvalue.length;
-        let char = displaysectionvalue.charAt(i);
-        // if(displaysectionvalue.charAt(digitCount-2) === ','){
-            // displaysection.innerHTML = displaysectionvalue.substring(0,digitCount-2);
-        // }
-        displaysection.innerHTML = displaysectionvalue.substring(0,digitCount-1);
-        final_value -= parseInt(char);
-    }
-    function clearscreen(){
-        const displaysection = document.getElementById('value');
-        displaysection.innerHTML = "";
-        final_value = 0;
-    }
+}
+function deletevalue(){
+    let displaysection = document.getElementById('value');
+    let displaysectionvalue = displaysection.textContent;
+    let digitCount = displaysectionvalue.length;
+    let char = displaysectionvalue.charAt(digitCount-1);
+    displaysection.innerHTML = displaysectionvalue.substring(0,digitCount-1);
+    final_value -= parseInt(char);
+    console.log("DeleteValue")
+}
+function clearscreen(){
+    const displaysection = document.getElementById('value');
+    displaysection.innerHTML = "";
+    final_value = 0;
+}
 let final_value  = 0;
 function displayvalue(){
     let displaysection = document.getElementById('value');
